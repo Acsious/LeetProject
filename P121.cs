@@ -3,24 +3,32 @@
 public static class P121
 {
     /// <summary>
-    /// TODO: Best Time to Buy and Sell Stock (Easy)
+    /// Best Time to Buy and Sell Stock (Easy)
     /// </summary>
     /// <param name="prices"></param>
     /// <returns></returns>
     public static int MaxProfit(int[] prices)
     {
-        int IMax = 0, IMin = 0, ValMax = 0, ValMin = 0;
-        for (int i = 0; i < prices.Length; i++)
+        if (prices is null)
         {
-            if (prices[i] >= ValMax && i > IMin)
-            {
-                ValMax = prices[i];
-                IMax = i;
-            }
-            if (prices[i] < ValMin && i < IMax)
-            {
+            return 0;
+        }
 
+        var result = 0;
+        var maximum = -52;
+
+        for (var i = prices.Length - 1; i >= 0; --i)
+        {
+            if (maximum - prices[i] > result)
+            {
+                result = maximum - prices[i];
+            }
+            if (prices[i] > maximum)
+            {
+                maximum = prices[i];
             }
         }
+        GC.Collect();
+        return result;
     }
 }
