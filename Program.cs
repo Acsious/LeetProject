@@ -16,6 +16,10 @@ public class Program
         //P122.MaxProfit([1, 5, 3, 3, 4, 9]);
         //P55.CanJump([2, 3, 1, 1, 4]);
         //P141.HasCycle();
-        P125.IsPalindrome("A man, a plan, a canal: Panama");
+        //P125.IsPalindrome("A man, a plan, a canal: Panama");
+        //P13.RomanToInt("III");
+        //P58.LengthOfLastWord("day");
+        //P860.LemonadeChange([5, 5, 5, 10, 20]);
+        P273.NumberToWords(12345);
     }
 }
