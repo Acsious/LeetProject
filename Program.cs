@@ -20,6 +20,11 @@ public class Program
         //P13.RomanToInt("III");
         //P58.LengthOfLastWord("day");
         //P860.LemonadeChange([5, 5, 5, 10, 20]);
-        P273.NumberToWords(12345);
+        //P273.NumberToWords(12345); //TODO
+        //P14.LongestCommonPrefix(["flower", "flow", "flight"]);
+        //P45.Jump([2, 3, 0, 1, 4]);
+        //P128.LongestConsecutive([0, 3, 7, 2, 5, 8, 4, 6, 0, 1]);//TODO
+        //P48.Rotate([[1, 2, 3], [4, 5, 6], [7, 8, 9]]);
+        P73.SetZeroes([[2, 2, 2], [3, 3, 3], [4, 4, 4], [5, 6, 7]]);
     }
 }

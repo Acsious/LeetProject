@@ -2,23 +2,11 @@
 
 public static class P383
 {
-    public static Dictionary<char, int> ransomDictionary = [];
     public static Dictionary<char, int> magazineDictionary = [];
     public static bool CanConstruct(string ransomNote, string magazine)
     {
         if (ransomNote.Length > magazine.Length) return false;
-        foreach (char c in ransomNote)
-        {
-            if (ransomDictionary.ContainsKey(c))
-            {
-                ransomDictionary[c]++;
-                
-            }
-            else
-            {
-                ransomDictionary.Add(c, 1);
-            }
-        }
+
         foreach (char c in magazine)
         {
             if (magazineDictionary.ContainsKey(c))
@@ -30,17 +18,17 @@ public static class P383
                 magazineDictionary.Add(c, 1);
             }
         }
-        foreach (var rD in ransomDictionary)
+        foreach (var rN in ransomNote)
         {
-            if (magazineDictionary.ContainsKey(rD.Key))
+            if (magazineDictionary.ContainsKey(rN))
             {
-                if (magazineDictionary[rD.Key] - rD.Value < 0)
-                {
-                    return false;
-                }
-                continue;
+                if (magazineDictionary[rN] == 0) return false;
+                magazineDictionary[rN]--;
             }
-            return false;
+            else
+            {
+                return false; 
+            }
         }
 
         return true;
